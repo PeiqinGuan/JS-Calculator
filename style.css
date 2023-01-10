@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    padding: auto;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, rgba(252, 224, 252, 0.5), rgba(226, 34, 226, 0.5), rgba(225, 255, 0, 0.5), rgba(248, 236, 13, 0.967));
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(1fr, auto) repeat(5, 1fr);
+    border: 4px solid rgb(83, 83, 83);
+    width: 360px;
+}
+
+.button {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.55);
+    border: 1px solid grey;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: aliceblue;
+    border: none;
+    color: orange;
+}
+
+.display {
+    background-color: rgba(0, 0, 0, .75);
+    color: white;
+    grid-column: span 4;
+    text-align: right;
+    padding: 10px;
+    overflow-wrap: anywhere;
+}
+
+#zero {
+    grid-column: span 2;
+}
+
+#equals {
+    grid-row: span 2;
+}
+
+#current {
+    font-size: 1.2rem;
+}
+
+#display {
+    font-size: 1.7rem;
+    margin-top: 10px;
+    color: orange;
+}
+
+#equals {
+    background-color: rgb(203, 228, 248);
+}
+
+#clear {
+    background-color: rgb(245, 157, 99);
+}
+
+#clear:hover {
+    color: white;
+}
