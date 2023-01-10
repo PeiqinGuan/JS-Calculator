@@ -51,6 +51,10 @@ function App () {
             setCurrent((prev) => prev + number)
         } else {
             if (number == '.' && current.includes('.')) return;
+            if (current == '0' && previous == '0' && number !== '0') {
+                setCurrent((prev) => prev.slice(0, -1))
+                setPrevious((prev) => prev.slice(0, -1))
+            }
             if (/[+*/-]/.test(current)) setCurrent('');
             if (current == 0 && previous == '' && number !== 0) setCurrent('');
             if (!current.includes('.') && number == 0 && current[0] == 0 && previous.length > 0) return;
